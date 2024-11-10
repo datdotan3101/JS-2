@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- BÀI TẬP 1  -->
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quản Lý Tuyển Sinh</title>
+    </head>
+
+    <body>
+        <h2>Quản Lý Tuyển Sinh</h2>
+
+        <form id="admissionForm">
+            <label for="score1">Điểm môn 1:</label>
+            <input type="number" id="score1" required><br>
+
+            <label for="score2">Điểm môn 2:</label>
+            <input type="number" id="score2" required><br>
+
+            <label for="score3">Điểm môn 3:</label>
+            <input type="number" id="score3" required><br>
+
+            <label for="area">Khu vực ưu tiên(A, B, C):</label>
+            <input type="text" id="area" required><br>
+
+            <label for="target">Đối tượng (1, 2, 3):</label>
+            <input type="number" id="target" required><br>
+
+            <label for="threshold">Điểm chuẩn:</label>
+            <input type="number" id="threshold" required><br>
+
+            <button type="button" onclick="calculateResult()">Kiểm tra</button>
+        </form>
+        <h3>Kết Quả</h3>
+        <p id="resultTuyenSinh"></p>
+        <!-- BÀI TẬP TÍNH THUẾ THU NHẬP CÁ NHÂN  -->
+        <hr>
+        <h2>Tính Tiền Điện</h2>
+        <form id="electricityForm">
+            <label for="name">Tên:</label>
+            <input type="text" id="name" required><br>
+
+            <label for="kw">Số kWh tiêu thụ:</label>
+            <input type="number" id="kw" required><br>
+
+            <button type="button" onclick="calculateBill()">Tính Tiền</button>
+        </form>
+        <h3>Kết Quả</h3>
+        <p id="resultTienDien"></p>
+
+        <hr>
+        <h2>Tính Thuế Thu Nhập Cá Nhân</h2>
+        <form id="incomeTaxForm">
+            <label for="name">Họ tên:</label>
+            <input type="text" id="name" required><br>
+
+            <label for="totalIncome">Tổng thu nhập năm (triệu VND):</label>
+            <input type="number" id="totalIncome" required><br>
+
+            <label for="dependents">Số người phụ thuộc:</label>
+            <input type="number" id="dependents" required><br>
+
+            <button type="button" onclick="displayTaxResult()">Tính Thuế</button>
+        </form>
+        <h3>Kết Quả</h3>
+        <p id="resultTax"></p>
+
+        <hr>
+        <h2>Tính Tiền Cáp</h2>
+
+        <form id="cableBillForm">
+            <label for="customerId">Mã khách hàng:</label>
+            <input type="text" id="customerId" required><br>
+            <label for="customerType">Loại khách hàng:</label>
+            <select id="customerType" onchange="toggleConnectionsField()">
+                <option value="residential">Nhà dân</option>
+                <option value="business">Doanh nghiệp</option>
+            </select><br>
+            <label for="connections">Số kết nối:</label>
+            <input type="number" id="connections" min="0" disabled><br>
+            <label for="premiumChannels">Số kênh cao cấp:</label>
+            <input type="number" id="premiumChannels" min="0" required><br>
+            <button type="button" onclick="calculateBill()">Tính Tiền</button>
+        </form>
+        <h3>Kết Quả</h3>
+        <p id="resultTienCap"></p>
+
+
+
+        <script src="./bt1.js"></script>
+        <script src="./bt2.js"></script>
+        <script src="/bt3.js"></script>
+        <script src="./bt4.js"></script>
+    </body>
+
+    </html>
